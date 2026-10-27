@@ -5,12 +5,13 @@ from random import randint
 
 # This is just the greeting/welcome screen.
 # i is used as a counter variable, which is necessary for a for loop.
+# Print blank lines to push old output offscreen
 for i in range(15):
     print()
 print("Welcome to the guessing game!")
 print()
 
-#I tried to use variables for everything so all the necessary changes can be made from right here up top.
+# I tried to use variables for everything so all the necessary changes can be made from right here up top.
 low = 0
 high = 10000
 attempts_limit = 15
