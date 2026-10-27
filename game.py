@@ -4,9 +4,9 @@
 from random import randint
 
 # This is just the greeting/welcome screen.
-# i is used as a counter variable, which is necessary for a for loop.
+# _ is used to indicated no counter variable is needed, just something there for the for loop to function.
 # Print blank lines to push old output offscreen
-for i in range(15):
+for _ in range(15):
     print()
 print("Welcome to the guessing game!")
 print()
