@@ -39,6 +39,7 @@ while True:
             print()
             continue
         break
+    
     except ValueError:
         print("Please enter a valid whole number.")
         print()
@@ -60,6 +61,7 @@ while True:
     # Makes sure input is a whole number.
     try:
         new_guess = int(guess)
+
     except ValueError:
         print("Please enter a valid whole number.")
         continue
