@@ -3,7 +3,8 @@
 # I had to import randint from the random module built into python to generate random numbers to guess.
 from random import randint
 
-# This is just the greeting
+# This is just the greeting/welcome screen.
+# i is used as a counter variable, which is necessary for a for loop.
 for i in range(15):
     print()
 print("Welcome to the guessing game!")
@@ -45,7 +46,7 @@ while True:
 # This is the main game loop which asks the user for input.
 while True:
 
-    # Checks if the user has reached max attempts
+    # Checks if the user has reached max attempts.
     if counter == max_attempts:
         print("Sorry, you ran out of valid attempts.")
         print(f"The actual number was {number}, better luck next time!")
@@ -55,23 +56,23 @@ while True:
     print()
     guess = input(f"Please enter a number between {low} and {high} or {quit_code} to quit: ")
 
-    # Makes sure input is a whole number
+    # Makes sure input is a whole number.
     try:
         new_guess = int(guess)
     except ValueError:
         print("Please enter a valid whole number.")
         continue
 
-    # Checks if user wants to leave the program
+    # Checks if user wants to leave the program.
     if new_guess == quit_code:
         break
 
-    # Checks if user input is in between the correct high and low values mentioned before
+    # Checks if user input is in between the correct high and low values mentioned before.
     if new_guess < low or new_guess > high:
         print(f"Please enter a number in between {low} and {high}.")
         continue
 
-    # This keeps track of the number of valid real attempts
+    # This keeps track of the number of valid real attempts.
     counter += 1
 
     if new_guess > number:
