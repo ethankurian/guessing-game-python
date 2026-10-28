@@ -34,7 +34,7 @@ while True:
             print()
             continue
         if max_guesses > guesses_limit:
-            print("Max guesses can't be that high, please try again.")
+            print(f"Max guesses less than or equal to {guesses_limit}, please try again.")
             print()
             continue
         break
