@@ -50,6 +50,7 @@ while True:
 
     # Checks if the user has reached max attempts.
     if counter == max_attempts:
+        print()
         print("Sorry, you ran out of valid attempts.")
         print(f"The actual number was {number}, better luck next time!")
         print()
@@ -79,13 +80,22 @@ while True:
     # This keeps track of the number of valid real attempts.
     counter += 1
 
+    # How many guesses the user has left
+    guesses_left = max_attempts - counter
+
+    # Makes sure working is right
+    if guesses_left == 1:
+        word = "guess"
+    else:
+        word = "guesses"
+
     if new_guess > number:
         print(f"Your guess of {new_guess} was too high, try a smaller number.")
-        print(f"You have {max_attempts - counter} guesses left. ")
+        print(f"You have {guesses_left} {word} left. ")
 
     elif new_guess < number:
         print(f"Your guess of {new_guess} was too low, try a bigger number.")
-        print(f"You have {max_attempts - counter} guesses left. ")
+        print(f"You have {guesses_left} {word} left. ")
     
     else:
         print(f"You did it! Your guess of {new_guess} was spot on!")
