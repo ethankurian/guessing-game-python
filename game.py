@@ -57,7 +57,7 @@ while True:
 
     print()
     guess = input(f"Please enter a number between {low} and {high} or {quit_code} to quit: ")
-    if guess != quit_code:
+    if guess != str(quit_code):
         print()
 
     # Makes sure input is a whole number.
@@ -71,6 +71,7 @@ while True:
     # Checks if user wants to leave the program.
     if new_guess == quit_code:
         print("Thanks for playing!")
+        print()
         break
 
     # Checks if user input is in between the correct high and low values mentioned before.
