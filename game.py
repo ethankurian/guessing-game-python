@@ -30,7 +30,7 @@ while True:
     try:
         max_guesses = int(max_guesses)
         if max_guesses < guesses_minimum:
-            print("Max guesses has to be greater than or equal to 1, please try again.")
+            print(f"Max guesses has to be greater than or equal to {guesses_minimum}, please try again.")
             print()
             continue
         if max_guesses > guesses_limit:
@@ -106,5 +106,8 @@ while True:
         word = "guess"
     else:
         word = "guesses"
-    
-    print(f"You have {guesses_left} {word} left.")
+
+    if guesses_left > 0:
+        print(f"You have {guesses_left} {word} left.")
+    else:
+        print(f"Womp Womp, you have {guesses_left} {word} left.")
