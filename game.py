@@ -57,6 +57,7 @@ while True:
 
     print()
     guess = input(f"Please enter a number between {low} and {high} or {quit_code} to quit: ")
+    print()
 
     # Makes sure input is a whole number.
     try:
@@ -79,10 +80,12 @@ while True:
     counter += 1
 
     if new_guess > number:
-        print(f"Your guess of {new_guess} was too high, try a smaller number")
+        print(f"Your guess of {new_guess} was too high, try a smaller number.")
+        print(f"You have {max_attempts - counter} guesses left. ")
 
     elif new_guess < number:
-        print(f"Your guess of {new_guess} was too low, try a bigger number")
+        print(f"Your guess of {new_guess} was too low, try a bigger number.")
+        print(f"You have {max_attempts - counter} guesses left. ")
     
     else:
         print(f"You did it! Your guess of {new_guess} was spot on!")
