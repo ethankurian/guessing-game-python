@@ -50,14 +50,15 @@ while True:
     # Checks if the user has reached max guesses.
     if counter == max_guesses:
         print()
-        print("Sorry, you ran out of valid guesses.")
+        print("You ou ran out of valid guesses.")
         print(f"The actual number was {number}, better luck next time!")
         print()
         break
 
     print()
     guess = input(f"Please enter a number between {low} and {high} or {quit_code} to quit: ")
-    print()
+    if guess != quit_code:
+        print()
 
     # Makes sure input is a whole number.
     try:
