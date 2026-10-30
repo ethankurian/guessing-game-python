@@ -50,7 +50,7 @@ while True:
     # Checks if the user has reached max guesses.
     if counter == max_guesses:
         print()
-        print("You ou ran out of valid guesses.")
+        print("You ran out of valid guesses.")
         print(f"The actual number was {number}, better luck next time!")
         print()
         break
